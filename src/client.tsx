@@ -1,9 +1,5 @@
-import {hydrate} from "react-dom";
 import {renderApp} from "./renderApp";
+import {hydrateRoot} from "react-dom/client";
 
-function run(){
-    hydrate(renderApp(),
-        document.getElementById('root'))
-}
+hydrateRoot(document.getElementById('root'),renderApp());
 
-run();
